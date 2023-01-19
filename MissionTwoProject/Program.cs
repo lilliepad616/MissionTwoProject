@@ -40,10 +40,12 @@ namespace MissionTwo
             {
                 int diceNum = i + 2;
                 string ast = "";
-                for (int iNum = 0; iNum < rollResults[i]; iNum++)
+                double resultPercent = (double)rollResults[i] * 0.1;
+                //Console.WriteLine(resultPercent);
+                while (resultPercent >= 1)
                 {
                     ast = ast + "*";
-
+                    resultPercent--;
                 }
                 Console.WriteLine(diceNum + ": " + ast);
             }
